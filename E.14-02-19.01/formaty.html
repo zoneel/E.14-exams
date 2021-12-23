@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Formatowanie</title>
+        <link rel="stylesheet" href="styl2.css" />
+    </head>
+    <body>
+        <section id="baner">
+            <h1>Formatowanie dokumentow HTML</h1>
+        </section>
+
+        <section id="jed">
+            <h2>Przyklad listy - hobby</h2>
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka
+                    <ol>
+                        <li>gory</li>
+                        <li>jeziora</li>
+                        <li>na rowerze</li>
+                    </ol>
+                </li>
+                <li>ksiazki</li>
+            </ul>
+        </section>
+        <section id="dwa">
+            <h2>Przyklady tabeli - rozklad dnia</h2>
+            <table>
+                <tr>
+                    <th>Pora dnia</th>
+                    <th>obowiazki</th>
+                </tr>
+                <tr>
+                    <td>rano</td>
+                    <td>nauka</td>
+                </tr>
+                <tr>
+                    <td>poludnie</td>
+                    <td>zajecia dodatkowe</td>
+                </tr>
+                <tr>
+                    <td>popoludnie</td>
+                    <td rowspan="2"> moje hobby</td>
+                </tr>
+                <tr>
+                    <td>wieczor</td>
+                    
+                </tr>
+
+            </table>
+        </section>
+        <section id="trzy">
+            <img src="napisy.png" alt="technologia web" />
+        </section>
+
+        <section id="glowny">
+            <p>Podaj rozmiar tekstu w procentach: <input type="number" id="proc" />%<br /></p>
+
+            <select id=styl>
+                <option value="none">prosty</option>
+                <option value="italic">kursywa</option>
+            </select><br />
+
+            <p>Jakim kolorem sformatowac tekst? Wybierz przycisk</p><br />
+            <input type="button" id="r" onclick=skryptr() />
+            <input type="button" id="g" onclick=skryptg() />
+            <input type="button" id="b" onclick=skryptb() />
+
+            <p id="output">To jest przyklad paragrafu ktory moze byc dowolnie formatowany  przez Java Script</p>
+            <script>
+                var procent = document.getElementById('proc');
+                var styl = document.getElementById('styl');
+                var out = document.getElementById('output');
+
+                function skryptr(){
+                    console.log(procent.value);
+                    console.log(styl.value);
+
+                    out.innerHTML = "<p style='color:red;font-size:"+procent.value+"%;font-style:"+styl.value+"'>To jest przyklad paragrafu ktory moze byc dowolnie formatowany  przez Java Script</p>";
+                }
+
+                function skryptg(){
+                    console.log(procent.value);
+                    console.log(styl.value);
+
+                    out.innerHTML = "<p style='color:green;font-size:"+procent.value+"%;font-style:"+styl.value+"'>To jest przyklad paragrafu ktory moze byc dowolnie formatowany  przez Java Script</p>";
+                }
+
+                function skryptb(){
+                    console.log(procent.value);
+                    console.log(styl.value);
+
+                    out.innerHTML = "<p style='color:blue;font-size:"+procent.value+"%;font-style:"+styl.value+"'>To jest przyklad paragrafu ktory moze byc dowolnie formatowany  przez Java Script</p>";
+                }
+            </script>
+        </section>
+
+        <section id="stopka">
+            <p>Formatowaniem tekstu zajmowal sie <i>zonel</i></p>
+            <a href="http://formatowanie.pl" target=_blank>Odwiedz takze</a>
+        </section>
+
+
+    </body>
+</html>
