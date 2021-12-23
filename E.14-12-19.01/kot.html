@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Nasze zdjecia</title>
+        <link rel="stylesheet" href="styl6.css" />
+    </head>
+    <body>
+        <section id="baner">
+            <h2>Nasze psy</h2>
+        </section>
+
+        <section id="lewy">
+            <h1>Wybierz</h1>
+            <ul>
+                <li><a href="pies.html">Psy</a></li>
+                <li><a href="kot.html">Koty</a></li>
+                <li>Konie</li>
+                <li>Rybki</li>
+                <li>Inne zdjecia</li>
+            </ul>
+
+            <h5><a href="index.html">Do strony glownej</a></h5>
+        </section>
+
+        <section id="prawy1">
+            <h2>Kliknij na zdjecie</h2>
+            <img src="kot1.jpg" alt="koty" id="kot" onmouseover=kot() onmouseout=kotout() onclick=kotclick() />
+            //zdjecie ktore sprawdza czy kursor jest na nim albo czy zostalo klikniete
+        </section>
+
+
+        <section id="prawy2">
+            <img src="kot1.jpg" id="duzyk" alt="Wybrany kot" />
+        </section>
+
+        <script>
+            var kotek = document.getElementById("kot");
+            var duzykot = document.getElementById('duzyk'); //lokalizujemy pola
+
+            //jak jest kursor na zdj to zmieniamy src zdjecia
+            function kot(){
+                kotek.src="kot1-odbicie.jpg";                   
+            }
+            //jak jest kursor poza zdj to zmieniamy src zdjecia
+            function kotout(){
+                kotek.src="kot1.jpg";                   
+            }
+            //jak wystapi klikniecie na zdj to zmieniamy src zdjecia
+            function kotclick(){
+                duzykot.src= "kot1-odbicie.jpg";                   
+            }
+
+        </script>
+        <section id="stopka">
+            Galerie zdjec opracowal: <b>zonel</b>
+        </section>
+
+    </body>
+</html>

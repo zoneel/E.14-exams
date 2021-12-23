@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Nasze zdjecia</title>
+        <link rel="stylesheet" href="styl6.css" />
+    </head>
+    <body>
+        <section id="baner">
+            <h2>Nasze psy</h2>
+        </section>
+
+        <section id="lewy">
+            <h1>Wybierz</h1>
+            <ul>
+                <li><a href="pies.html">Psy</a></li>
+                <li><a href="kot.html">Koty</a></li>
+                <li>Konie</li>
+                <li>Rybki</li>
+                <li>Inne zdjecia</li>
+            </ul>
+
+            <h5><a href="index.html">Do strony glownej</a></h5>
+        </section>
+
+        <section id="prawy1">
+            <h2>Kliknij na zdjecie</h2>
+            <img src="pies1.jpg" alt="psy" id="pies1" onmouseover=piesek1() onmouseout=piesek1out() onclick=piesek1click() >
+            <img src="pies2.jpg" alt="psy" id="pies2" onmouseover=piesek2() onmouseout=piesek2out() onclick=piesek2click() />
+            <img src="pies3.jpg" alt="psy" id="pies3" onmouseover=piesek3() onmouseout=piesek3out() onclick=piesek3click() />
+        </section>
+        <section id="prawy2">
+            <img src="pies2.jpg" id="duzy" alt="Wybrany pies" />
+        </section>
+            <script>
+                var pies1 = document.getElementById("pies1");
+                var pies2 = document.getElementById("pies2");
+                var pies3 = document.getElementById("pies3");
+                var duzy = document.getElementById('duzy');
+
+                //do psa 1
+                function piesek1(){
+                    pies1.src="pies1-odbicie.jpg";                   
+                }
+                function piesek1out(){
+                    pies1.src="pies1.jpg";                   
+                }
+
+                function piesek1click(){
+                    duzy.src="pies1-odbicie.jpg";                   
+                }
+
+                //do psa 2
+                function piesek2(){
+                    pies2.src="pies2-odbicie.jpg";                   
+                }
+                function piesek2out(){
+                    pies2.src="pies2.jpg";                   
+                }
+
+                function piesek2click(){
+                    duzy.src="pies2-odbicie.jpg";                   
+                }
+
+                //do psa 3
+                function piesek3(){
+                    pies3.src="pies3-odbicie.jpg";                   
+                }
+                function piesek3out(){
+                    pies3.src="pies3.jpg";                   
+                }
+
+                function piesek3click(){
+                    duzy.src="pies3-odbicie.jpg";                   
+                }
+            </script>
+        <section id="stopka">
+            Galerie zdjec opracowal: <b>zonel</b>
+        </section>
+
+    </body>
+</html>
