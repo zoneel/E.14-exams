@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Hurtownia</title>
+        <link rel="stylesheet" href="styl4.css"/>
+
+    </head>
+    <body>
+        <section id="logo">
+            <img src="logo.png" alt="hurtownia"/>
+        </section>
+        <section id="menu">
+            <a href="index.html">Strona glowna</a>
+            <a href="zamowienia.html">Zamowienia</a>
+            <a href="blog.html">Blog o kawie</a>
+            <a href="http://gatunki-kawy.pl/" target=_blank>Odwiedz takze</a>
+        </section>
+
+        <section id="baner">
+            <h1>Hurtownia kawy</h1>
+        </section>
+
+        <section id="lewy">
+            <h2>Oferta</h2>
+            <ol>
+                <li>Kawa palona Arabica</li>
+                <li>Kawa palona Robusta</li>
+                <li>Kawa bezkofeinowa</li>
+                <li>Kawa zielona</li>
+            </ol>
+        </section>
+        <section id="prawy">
+            Podaj numer kawy:<br/>
+            <input type="number" id="numer"/><br/>
+            Podaj wage w dekagramach:<br/>
+            <input type="number" id="waga"/><br/>
+            <input type="submit" value="Zamow" onclick=oblicz() />
+            <div id="output"></div>
+        </section>
+
+        <script>
+            function oblicz(){
+                var waga = document.getElementById('waga').value;
+                var numer = document.getElementById('numer').value;
+                var out = document.getElementById('output')
+                console.log(waga+" "+numer);
+                    if(numer == 1){
+                    var cena = waga*5;
+                    out.innerText = "Koszt zamowienia wynosi:"+cena;
+                }if (numer == 2) {
+                    var cena = waga*7;
+                    out.innerText = "Koszt zamowienia wynosi:"+cena;
+                }if(numer == 3){
+                    var cena = waga*6;
+                    out.innerText = "Koszt zamowienia wynosi:"+cena;
+                }
+            }
+        </script>
+
+        <section id="stopka">
+            Strone przygotowal: <b>zonel</b>
+        </section>
+    </body>
+</html>
