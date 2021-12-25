@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Miernik jakości hasła</title>
+        <link rel="stylesheet" href="styl.css" />
+    </head>
+    <body>
+        <section id="baner">
+            <a href="index.html"><h1>Sprawdz swoje hasło</h1></a>
+        </section>
+
+        <section id="lewy">
+            <h2>Wybierz</h2>
+            <ul>
+                <li><a href="haslo.html">Sprawdz hasło</a></li>
+                <li><a href="zasady.html">Zasady tworzenia hasła</a></li>
+
+            </ul>
+        </section>
+        <section id="prawy">
+            <p>Twoje hasło: <input type="password" id="has" /> <input type="button" id="guz" value="Sprawdź" onclick=oblicz() /> </p>
+            <p id="output"></p>
+        </section>
+
+        <script>
+            const hasl = document.getElementById("has");
+            const out = document.getElementById("output");
+            
+
+            function oblicz(){            
+                console.log(hasl.value);
+                console.log(hasl.value.length);
+                if(!hasl.value){
+                    out.innerHTML = "<p style='color:red'>WPISZ HASŁO!</p>"
+                }else
+                if(hasl.value.length > 7){
+                    out.innerHTML = "<p style='color:green'>DOBRE</p>"
+                }else
+                if(hasl.value.length > 4 && hasl.value.length < 6){
+                    out.innerHTML = "<p style='color:blue'>ŚREDNIE</p>"
+                }
+                else
+                {
+                    out.innerHTML = "<p style='color:yellow'>SŁABE</p>"
+                }
+            }
+
+        </script>
+
+        <section id="stopka">
+            <h3>Miernik jakości hasła</h3><br />
+            <p>Stronę opracował: zonel</p>
+        </section>
+
+    </body>
+</html>
