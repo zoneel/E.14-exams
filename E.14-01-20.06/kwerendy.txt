@@ -1,0 +1,3 @@
+Kwerenda 1: SELECT cena FROM `farby` WHERE kolor = "niebieski";
+Kwerenda 2: SELECT kolor, cena/pojemnosc FROM farby;
+Kwerenda 3: SELECT malowanie.id_pomieszczenia, farby.kolor FROM farby JOIN malowanie WHERE farby.id_farby = malowanie.id_farby AND id_pomieszczenia = "3"

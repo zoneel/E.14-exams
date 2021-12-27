@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>malarz</title>
+    <link rel="stylesheet" href="styl.css" />
+</head>
+
+<body>
+    <section id="baner">
+        <h1><a href="index.html">Koszt farby</a></h1>
+    </section>
+
+    <section id="lewy">
+        <h3>Mieszamy czy wyceniamy?</h3>
+        <a href="mieszamy.html">Mieszamy</a><br />
+        <a href="cena.html">Wyceniamy</a>
+    </section>
+    <section id="prawy">
+        <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
+        Podaj powierzchnię: <input type="number" id="wart" step="0.1" /><br />
+        <input type="button" id="guzik" value="Policz" onclick=oblicz() />
+        <p id="output"></p>
+    </section>
+
+    <script>
+        function oblicz() {
+            const wart = document.getElementById("wart");
+            const out = document.getElementById("output");
+
+            var ile = wart.value / 4;
+            out.innerHTML = "Liczba jednolitych puszek farby potrzebnych do pomalowania wynosi: " + Math.ceil(ile);
+
+
+        }
+    </script>
+
+
+    <section id="stopka">
+        MALARZ <br />
+        Stronę opracował: zonel
+    </section>
+
+</body>
+
+</html>
