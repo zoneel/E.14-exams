@@ -1,0 +1,5 @@
+Zapytanie 1: CREATE TABLE zamowienia(id INT NOT NULL, imie TEXT, nazwisko TEXT, adres_email TEXT, liczba_choinek INT, liczba_mikolajow INT, liczba_reniferow INT, info BOOLEAN);
+Zapytanie 2: ALTER TABLE zamowienia ADD PRIMARY KEY(id)
+Zapytanie 3: CREATE USER klient IDENTIFIED BY klient123;
+Zapytanei 4: GRANT INSERT ON zamowienia TO klient;
+Zapytanie 5: INSERT INTO zamowienia (`imie`,`nazwisko`,`adres_email`) VALUES ("Jan","Kowalski","jKowalski@poczta.pl");

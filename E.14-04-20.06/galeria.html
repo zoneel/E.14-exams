@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Sklep</title>
+        <link rel="stylesheet" href="styl.css" />
+
+    </head>
+    <body>
+        <section id="baner">
+            <h1>Ozdoby - Sklep</h1>
+        </section>
+        <section id="lewy">
+            <h2>OZDOBY</h2>
+            <a href="galeria.html">Galeria</a><br />
+            <a href="zamowienie.php">Zamowienie</a>
+        </section>
+        <section id="srodkowy">
+            <img src="choinka.jpg" id="choin" alt="ozdoby choinkowe" onmouseover=cho() />
+            <img src="mikolaj.jpg" id="miko" alt="ozdoby choinkowe" onmouseover=mik() />
+            <img src="renifer.jpg" id="reni" alt="ozdoby choinkowe" onmouseover=ren() />
+
+            <p>Wybierz ozdobę w kółku</p>
+
+            <p id="output">**skrypt 1**</p>
+
+            <script>
+                var choina = document.getElementById('choin');
+                var mikolaj = document.getElementById('miko');
+                var renifer = document.getElementById('reni');
+                var out = document.getElementById('output');
+
+                function cho(){
+                    out.innerHTML = "Wybrałes choinkę. Cena 10 zł";
+                }
+
+                function mik(){
+                    out.innerHTML = "Wybrałes mikołaja. Cena 12 zł";
+                }
+
+                function ren(){
+                    out.innerHTML = "Wybrałes renifera. Cena 8 zł";
+                }
+            </script>
+        </section>
+        <section id="prawy">
+            <img src="animacja.gif" />
+        </section>
+        <section id="stopka">
+            <h3>Autor strony: zonel</h3>
+        </section>
+
+
+    </body>
+</html>
