@@ -1,0 +1,42 @@
+#baner {
+    background-image: url(menu.jpg);
+    color: blue;
+    height: 200px;
+}
+
+#lewy {
+    float: left;
+    background-color: rgb(255,218,65);
+    text-align: center;
+    width: 40%;
+    height: 400px;
+}
+
+#srodek {
+    float: left;
+    background-color: rgb(255,226,100);
+    text-align: center;
+    width: 30%;
+    height: 400px;
+}
+
+#prawy {
+    float: left;
+    background-color: rgb(255,233,143);
+    text-align: center;
+    width: 30%;
+    height: 400px;
+}
+
+#stopka {
+    background-color: rgb(255,218,65);
+    color: blue;
+}
+
+a {
+    color: green;
+}
+
+p {
+    font-size: 130%;
+}
