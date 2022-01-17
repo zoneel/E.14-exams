@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO ogloszenie VALUES (NULL,"1","2","0","Celine Dion","Sprzedam CD piosenkarki");
+Zapytanie 2: SELECT tytul, tresc FROM ogloszenie WHERE kategoria = 1 AND podkategoria = 13;
+Zapytanie 3: CREATE USER andrzej IDENTIFIED BY "xsw23";
+Zapytanie 4: GRANT SELECT, ALTER ON ogloszenie TO andrzej;
